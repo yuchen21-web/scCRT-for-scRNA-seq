@@ -91,7 +91,7 @@ trajectory, network, evaluation_details = get_trajectory(cell_labels,
 
 for [s,t] in zip(network[0], network[1]):
     print(f'{s} --> {t}')
-'''
+```
 M1 --> M3
 M3 --> M2
 M3 --> M7
@@ -99,8 +99,6 @@ M7 --> M5
 M5 --> M4
 M5 --> M6
 M7 --> M8
-'''
-```
 
 #### 1.4.1 Evaluation the HIM, F1-branches and F1-milestones using dyneval.
 ```python
@@ -108,7 +106,7 @@ if '.rds' in dataset_path:
     HIM, F1_branches, F1_milestones = evaluation(pre_infos, evaluation_details)
     print('HIM:{:.3f}, F1-branches:{:.3f}, F1-milestones:{:.3f}'.format(HIM, F1_branches, F1_milestones))
 ```
-HIM:1.000, F1-branches:0.566, F1-milestones:0.760
+HIM: 1.000, F1-branches: 0.566, F1-milestones: 0.760
 
 ### 1.5 Estimate pseudotimes.
 ```python
