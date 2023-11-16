@@ -166,10 +166,11 @@ dynplot::plot_dimred(data)
 
 Install the scCRT as a python function with setup.py.
 
-note:
-Due to path issues with jupyter, when not using jupyter, please change the 
-'from scCRT.model.Model import *' -> 'from model.Model import *'
-'from scCRT.scCRTUtils import *' -> 'from scCRTUtils import *'
+Note: Due to path issues with jupyter, when not using jupyter, please change the
+
+- 'from scCRT.model.Model import *' -> 'from model.Model import *'
+
+- 'from scCRT.scCRTUtils import *' -> 'from scCRTUtils import *'
 
 ### 2.1 Install scCRTUtils in shells
 
