@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: scCRT
+Version: 1.0
+Summary: a dimensionality reduction model for scRNA-seq trajectory inference
+Author: Yuchen Shi
+Author-email: yuchen@hdu.edu.cn
