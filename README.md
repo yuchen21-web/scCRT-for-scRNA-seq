@@ -92,13 +92,13 @@ trajectory, network, evaluation_details = get_trajectory(cell_labels,
 for [s,t] in zip(network[0], network[1]):
     print(f'{s} --> {t}')
 ```
-M1 --> M3 
+M1 --> M3  
 M3 --> M2 
 M3 --> M7 
 M7 --> M5 
 M5 --> M4 
 M5 --> M6 
-M7 --> M8 
+M7 --> M8
 
 #### 1.4.1 Evaluation the HIM, F1-branches and F1-milestones using dyneval.
 ```python
