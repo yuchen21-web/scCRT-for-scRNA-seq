@@ -112,11 +112,48 @@ HIM: 1.000, F1-branches: 0.566, F1-milestones: 0.760
 ### 1.5 Estimate pseudotime.
 The method of estimating pseudotime is based on [Slingshot](https://github.com/mossjacob/pyslingshot), and the difference is that we changed the pattern of infer trajectory (center-based -> KNN-based).
 ```python
-time_model = Estimate_time(y_features, cell_labels, start_node=start_node, 
-                          k=20)
+time_model = Estimate_time(y_features, cell_labels, start_node=start_node, k=20)
 time_model.fit(num_epochs=1)
-
 predict_times = time_model.unified_pseudotime.astype(float)
 ```
+
+### 1.6 Visualization or evaluation.
+
+We use dynplot for visualization, which is an R package.
+```python
+'''
+Save these 4 variables for R language visualization and evaluation
+'''
+milestone_network = evaluation_details[0]
+progressions = evaluation_details[1]
+milestone_percentages = evaluation_details[2]
+dimred = umap.UMAP().fit_transform(y_features) # for visualization
+
+```
+
+
+```R
+
+data <- readRDS('binary_tree_8.rds')
+
+model <- dynwrap::wrap_expression(
+  counts = data$counts,
+  expression = data$expression
+) %>%
+  dynwrap::add_trajectory(
+    milestone_network = milestone_network,
+    progressions = progressions,
+    milestone_percentages = milestone_percentages
+  ) %>% dynwrap::add_grouping(
+    data$prior_information$groups_id
+  ) %>% dynwrap::add_dimred(
+    dimred
+  )
+
+plot_dimred(data)
+```
+
+
+
 
 
