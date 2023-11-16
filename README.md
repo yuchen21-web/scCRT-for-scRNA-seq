@@ -30,7 +30,7 @@ scCRT employs two feature learning components, a cell-level pairwise module and 
 
 This is a running guide for scCRT using public datasets in our experments. Moreover, we provided a saved trained model and binary_tree_8 synthetic dataset to verify the effectiveness of the paper.
 
-## 1. Follow the procedure below to perform scCRT on binary_tree_8 synthetic dataset with the jupyter or on [tutorial_CLImpte.ipynb](https://github.com/yuchen21-web/Imputation-for-scRNA-seq/blob/main/src/tutorial_CLImpte.ipynb)
+## 1. Follow the procedure below to perform scCRT on binary_tree_8 synthetic dataset with the jupyter or on [tutorial_scCRT.ipynb]()
 
 ### 1.1 Read the dataset.
 
@@ -45,7 +45,7 @@ device=torch.device('cpu')
 dataset_path = 'absolute_path/data/binary_tree_8.rds'
 dataset_label_path = None
 
-# (from .csv) Need to save the information of the dataset to CSV in R language in advance
+# (from .csv) Need to save the information of the dataset to csv from .rds
 # dataset_path = 'src/scCRT/data/binary_tree_8.csv'
 # dataset_label_path = 'src/scCRT/data/binary_tree_8_label.csv'
 
