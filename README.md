@@ -164,8 +164,25 @@ dynplot::plot_dimred(data)
 
 ## 2. learning features using scCRT
 
-### 2.1 preprocess data
+Install the scCRT as a python function with setup.py.
+
+note:
+Due to path issues with jupyter, when not using jupyter, please change the 
+'from scCRT.model.Model import *' -> 'from model.Model import *'
+'from scCRT.scCRTUtils import *' -> 'from scCRTUtils import *'
+
+### 2.1 Install scCRTUtils in shells
+
+```shell
+~$ cd src/scCRT/
+src/scCRT$ python3 setup.py bdist
+src/scCRT$ sudo python3 setup.py install --record installed.txt
+```
+
+### 2.2 preprocess data
 ```python
+import scCRTUtils
+
 # input: data_counts [n_cells, n_genes]
 # output: the normalized expression data [n_cells, top_2000_genes]
 if cell_labels is None: # If there is no cell labels of prior information, Louvain can be used for partitioning like PAGA
@@ -191,4 +208,9 @@ y_features = trainingModel(features, cell_labels, device, hidden=[128, 16],  k=2
 
 ### 2.3 infer lineages with features
 
-The process is similar to section 1.4. Other methods (e.g. [Slingshot](https://github.com/mossjacob/pyslingshot)) can also be used to infer trajectories using learned features
+The process is similar to section 1.4. Other methods (e.g. [Slingshot](https://github.com/mossjacob/pyslingshot)) can also be used to infer trajectories using learned features.
+
+
+
+
+
