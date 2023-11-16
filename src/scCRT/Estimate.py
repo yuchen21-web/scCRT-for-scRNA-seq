@@ -8,7 +8,7 @@ from sklearn.neighbors import KernelDensity
 from collections import deque
 from tqdm import tqdm
 # jupyter 是需要写成这个
-from scCRT.utils_func import *
+from scCRT.scCRTUtils import *
 
 
 
