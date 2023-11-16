@@ -5,6 +5,9 @@ scCRT is a dimensionality reduction model for scRNA-seq trajectory inference.
 
 Overall architecture of the scCRT model pipeline:
 
+scCRT employs two feature learning components, a cell-level pairwise module and a cluster-level contrastive module, to learn accurate positional representations of cells conducive to inferring cell lineages. The cell-level module focuses on learning accurate cell representations in a reduced-dimensionality space while maintaining the cell–cell positional relationships in the original space. The cluster-level contrastive module uses prior cell state information to aggregate similar cells, preventing excessive dispersion in the low-dimensional space.
+
+
 # Requirements
 - python (for use)
   - python = 3.7
@@ -70,7 +73,7 @@ features: the preprocessed expression matrix, [n_cell, n_genes], numpy.array
 cell_labels: the label of cells, numpy.array
 
 output: 
-y_features: the learned cell features, [n_cell, hidden]
+y_features: the learned cell features, [n_cell, feature_size]
 '''
 
 model_path = 'scCRT/data/binary_tree_8_model.pkl' # a provided trained model for binary_tree_8 dataset
@@ -156,5 +159,33 @@ plot_dimred(data)
 
 
 
+## 2. learning features using scCRT
 
+### 2.1 preprocess data
+```python
+# input: data_counts [n_cells, n_genes]
+# output: the normalized expression data [n_cells, top_2000_genes]
+if cell_labels is None: # If there is no cell labels of prior information, Louvain can be used for partitioning like PAGA
+    features, cell_labels = pre_process(data_counts, WithoutLabel=True)
+else:
+    features = pre_process(data_counts)
+```
 
+### 2.2 learn cell features.
+```python
+'''
+Parameters
+----------
+input: 
+features: the preprocessed expression matrix, [n_cell, n_genes], numpy.array
+cell_labels: the label of cells, numpy.array
+
+output: 
+y_features: the learned cell features, [n_cell, feature_size]
+'''
+y_features = trainingModel(features, cell_labels, device, hidden=[128, 16],  k=20, epochs=200)
+```
+
+### 2.3 infer lineages with features
+
+The process is similar to section 1.4. Other methods (e.g. [Slingshot](https://github.com/mossjacob/pyslingshot)) can also be used to infer trajectories using learned features
