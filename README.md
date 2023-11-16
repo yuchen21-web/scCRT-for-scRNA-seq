@@ -5,6 +5,9 @@ scCRT is a dimensionality reduction model for scRNA-seq trajectory inference.
 
 Overall architecture of the scCRT model pipeline:
 
+![Model](https://github.com/yuchen21-web/scCRT-for-scRNA-seq/blob/main/src/Model.png)
+
+
 scCRT employs two feature learning components, a cell-level pairwise module and a cluster-level contrastive module, to learn accurate positional representations of cells conducive to inferring cell lineages. The cell-level module focuses on learning accurate cell representations in a reduced-dimensionality space while maintaining the cell–cell positional relationships in the original space. The cluster-level contrastive module uses prior cell state information to aggregate similar cells, preventing excessive dispersion in the low-dimensional space.
 
 
