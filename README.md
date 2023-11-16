@@ -14,6 +14,7 @@ Overall architecture of the scCRT model pipeline:
   - torch
   - scanpy
   - scipy
+  - [pcurvepy](https://github.com/mossjacob/pcurvepy) (for estimating pseudotime)
   - rpy2 (for evaluation using dyneval package)
 
 - R (for evaluation)
@@ -108,7 +109,8 @@ if '.rds' in dataset_path:
 ```
 HIM: 1.000, F1-branches: 0.566, F1-milestones: 0.760
 
-### 1.5 Estimate pseudotimes.
+### 1.5 Estimate pseudotime.
+The method of estimating pseudotime is based on [Slingshot](https://github.com/mossjacob/pyslingshot), and the difference is that we changed the pattern of infer trajectory (center-based -> KNN-based).
 ```python
 time_model = Estimate_time(y_features, cell_labels, start_node=start_node, 
                           k=20)
