@@ -107,10 +107,8 @@ M7 --> M8
 if '.rds' in dataset_path:
     HIM, F1_branches, F1_milestones = evaluation(pre_infos, evaluation_details)
     print('HIM:{:.3f}, F1-branches:{:.3f}, F1-milestones:{:.3f}'.format(HIM, F1_branches, F1_milestones))
-'''
-HIM:1.000, F1-branches:0.566, F1-milestones:0.760
-'''
 ```
+HIM:1.000, F1-branches:0.566, F1-milestones:0.760
 
 ### 1.5 Estimate pseudotimes.
 ```python
