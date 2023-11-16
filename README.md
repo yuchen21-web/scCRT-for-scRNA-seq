@@ -24,7 +24,7 @@ scCRT employs two feature learning components, a cell-level pairwise module and 
   - rpy2 (for evaluation using dyneval package)
 
 - R (for evaluation)
-  - dynbenchmark
+  - [dynwrap](https://github.com/dynverse/dynwrap)
 
 # Tutorial
 
@@ -125,7 +125,7 @@ predict_times = time_model.unified_pseudotime.astype(float)
 
 ### 1.6 Visualization or evaluation.
 
-We use dynplot for visualization, which is an R package.
+We use [dynplot](https://github.com/dynverse/dynplot) for visualization, which is an R package.
 ```python
 '''
 Save these 4 variables for R language visualization and evaluation
@@ -156,7 +156,7 @@ model <- dynwrap::wrap_expression(
     dimred
   )
 
-plot_dimred(data)
+dynplot::plot_dimred(data)
 ```
 <img src=https://github.com/yuchen21-web/scCRT-for-scRNA-seq/blob/main/src/synthetic_our_traj.png width=40% />
 
