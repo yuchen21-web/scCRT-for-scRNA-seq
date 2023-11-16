@@ -152,8 +152,7 @@ model <- dynwrap::wrap_expression(
 
 plot_dimred(data)
 ```
-
-![visualized](src/synthetic_our_traj.png)
+<img src=https://github.com/yuchen21-web/scCRT-for-scRNA-seq/src/synthetic_our_traj.png width=60% />
 
 
 
