@@ -153,6 +153,8 @@ model <- dynwrap::wrap_expression(
 plot_dimred(data)
 ```
 
+![visualized](src/synthetic_our_traj.png)
+
 
 
 
