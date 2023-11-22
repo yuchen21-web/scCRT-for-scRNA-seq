@@ -45,11 +45,10 @@ device=torch.device('cpu')
 dataset_path = 'absolute_path/data/binary_tree_8.rds'
 dataset_label_path = None
 
-# (from .csv) Need to save the information of the dataset to csv from .rds
+# or (from .csv) Need to save the information of the dataset to csv from .rds
 # dataset_path = 'src/scCRT/data/binary_tree_8.csv'
 # dataset_label_path = 'src/scCRT/data/binary_tree_8_label.csv'
 
-## get and preprocess data
 # get_data
 data_counts, cell_labels, cells, name2ids, ids2name, cell_times, pre_infos = getInputData(dataset_path, 
                                                                                           dataset_label_path)
