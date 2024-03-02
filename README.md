@@ -25,6 +25,7 @@ scCRT employs two feature learning components, a cell-level pairwise module and 
 
 - R (for evaluation)
   - [dynwrap](https://github.com/dynverse/dynwrap)
+  - magrittr
 
 # Tutorial
 
