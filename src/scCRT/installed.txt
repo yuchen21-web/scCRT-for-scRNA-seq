@@ -1,7 +1,0 @@
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/scCRTUtils.py
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/model/__init__.py
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/model/Model.py
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/__pycache__/scCRTUtils.cpython-37.pyc
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/model/__pycache__/__init__.cpython-37.pyc
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/model/__pycache__/Model.cpython-37.pyc
-/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/scCRT-1.0-py3.7.egg-info

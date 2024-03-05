@@ -1,7 +1,0 @@
-scCRTUtils.py
-setup.py
-model/Model.py
-scCRT.egg-info/PKG-INFO
-scCRT.egg-info/SOURCES.txt
-scCRT.egg-info/dependency_links.txt
-scCRT.egg-info/top_level.txt
