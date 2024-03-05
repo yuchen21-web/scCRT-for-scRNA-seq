@@ -31,7 +31,7 @@ scCRT employs two feature learning components, a cell-level pairwise module and 
 
 This is a running guide for scCRT using public datasets in our experments. Moreover, we provided a saved trained model and binary_tree_8 synthetic dataset to verify the effectiveness of the paper.
 
-## 1. Follow the procedure below to perform scCRT on binary_tree_8 synthetic dataset with the jupyter or on [tutorial_scCRT.ipynb](https://github.com/yuchen21-web/scCRT-for-scRNA-seq/blob/main/src/tutorial_scCRT.ipynb)
+## 1. Follow the procedure below to perform scCRT on binary_tree_8 synthetic dataset with the jupyter or on [tutorial_scCRT.ipynb](https://github.com/yuchen21-web/scCRT-for-scRNA-seq/blob/main/scCCRT/tutorial_scCRT.ipynb)
 
 ### 1.1 Read the dataset.
 
