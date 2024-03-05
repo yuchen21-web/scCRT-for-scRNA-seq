@@ -117,8 +117,11 @@ usee the provided requirement.txt or use conda as follow:
 scCRT$ python run_test.py
 ```
 Progenitor trophoblast_Gjb3 high(Placenta) --> Labyrinthine trophoblast(Placenta)
+
 Progenitor trophoblast_Gjb3 high(Placenta) --> Spongiotrophoblast_Phlda2 high(Placenta)
+
 Spongiotrophoblast_Phlda2 high(Placenta) --> Spongiotrophoblast_Hsd11b2 high(Placenta)
+
 Progenitor trophoblast_Gjb3 high(Placenta) --> Spiral artery trophoblast giant cells(Placenta)
 
 
